@@ -1,0 +1,11 @@
+name: Backpacks
+version: 1.0.0
+main: schlaubi77.backpack.main.Main
+api-version: 1.13
+
+commands:
+   savestop:
+      description: Stop the server without players being able to dupe items becase of it!
+      permission: op
+      permission-message: You don't have the required permissions!
+      usage: /savestop
