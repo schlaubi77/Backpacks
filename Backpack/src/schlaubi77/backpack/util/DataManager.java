@@ -49,7 +49,7 @@ public class DataManager {
             this.getConfig().save(this.configFile);
         }
         catch (IOException e) {
-            this.plugin.getLogger().log(Level.SEVERE, "Saving of File " + FILE_NAME + " has failed", e);
+            this.plugin.getLogger().log(Level.SEVERE, "[Backpacks] Saving of File " + FILE_NAME + " has failed", e);
         }
     }
     
@@ -60,9 +60,10 @@ public class DataManager {
         if (!this.configFile.exists()) {
             try {
                 this.configFile.createNewFile();
+                this.plugin.getLogger().log(Level.INFO, "[Backpacks] Created the file " + FILE_NAME);
             }
             catch (IOException e) {
-                this.plugin.getLogger().log(Level.SEVERE, "Creating the file data.yml failed! Backpacks will not keep their items!", e);
+                this.plugin.getLogger().log(Level.SEVERE, "[Backpacks] Creating the file " + FILE_NAME + " failed! Backpacks will not keep their items!", e);
             }
         }
     }
